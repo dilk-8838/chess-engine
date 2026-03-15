@@ -59,7 +59,7 @@ class ChessUI:
         for color in ['w', 'b']:
             for piece in ['p', 'n', 'b', 'r', 'q', 'k']:
                 filename = f"{color}{piece}.png"
-                img = pygame.image.load(filename)
+                img = pygame.image.load(f"assets/{filename}")
                 img = pygame.transform.smoothscale(img, (TILE_SIZE, TILE_SIZE))
                 pieces[color + piece] = img
         return pieces
